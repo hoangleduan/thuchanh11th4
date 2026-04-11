@@ -1,6 +1,7 @@
 -THÔNG TIN SINH VIÊN 
 -HOÀNG LÊ DUẨN 
 -23810310256
+-Tất cả ảnh và vd đã ddc e update !
 -------------------------------------------------------
 <img width="944" height="2046" alt="image" src="https://github.com/user-attachments/assets/f684d2f0-acea-499b-9eb3-7b3acc876363" />
 <img width="944" height="2046" alt="image" src="https://github.com/user-attachments/assets/9dc5e76b-5c3b-441b-a372-08ce37ee1d68" />
