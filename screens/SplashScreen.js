@@ -58,7 +58,7 @@ export default function SplashScreen({ navigation }) {
           fontWeight: "500",
         }}
       >
-        
+        By Hoàng Lê Duẩn
       </Text>
 
     </View>
