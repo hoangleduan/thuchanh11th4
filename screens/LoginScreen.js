@@ -79,6 +79,7 @@ export default function LoginScreen({ navigation }) {
 
         {/* BUTTON LOGIN */}
         <TouchableOpacity
+          onPress={() => navigation.navigate("Home")}
           style={{
             backgroundColor: "#53B175",
             padding: 18,
