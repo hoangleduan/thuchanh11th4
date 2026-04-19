@@ -25,6 +25,7 @@ export const storeAssets = {
   beverageOrangeJuice: require("../assets/tree top.png"),
   beverageCoke: require("../assets/coca red.png"),
   beveragePepsi: require("../assets/pessi.png"),
+  beveragesFilterIcon: require("../assets/find.png"),
   tabShop: require("../assets/Vector (4).png"),
   tabExplore: require("../assets/Group 3.png"),
   tabCart: require("../assets/Vector.png"),

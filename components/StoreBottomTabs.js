@@ -11,12 +11,12 @@ const tabs = [
     asset: storeAssets.tabExplore,
     route: "Explore",
   },
-  { key: "Cart", label: "Cart", asset: storeAssets.tabCart, route: null },
+  { key: "Cart", label: "Cart", asset: storeAssets.tabCart, route: "MyCart" },
   {
     key: "Favourite",
     label: "Favourite",
     asset: storeAssets.tabFavourite,
-    route: null,
+    route: "Favourites",
   },
   {
     key: "Account",

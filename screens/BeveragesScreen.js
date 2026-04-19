@@ -2,7 +2,7 @@ import React from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { beverageProducts } from "../data/storeData";
+import { beverageProducts, storeAssets } from "../data/storeData";
 
 function BeverageCard({ item }) {
   return (
@@ -73,7 +73,10 @@ export default function BeveragesScreen({ navigation }) {
         <Text style={{ fontSize: 22, fontWeight: "700", color: "#181725" }}>
           Beverages
         </Text>
-        <Text style={{ fontSize: 22, color: "#181725" }}>[]</Text>
+        <Image
+          source={storeAssets.beveragesFilterIcon}
+          style={{ width: 18, height: 18, resizeMode: "contain" }}
+        />
       </View>
 
       <ScrollView

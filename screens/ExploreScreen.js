@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Image,
-  ScrollView,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import StoreBottomTabs from "../components/StoreBottomTabs";
@@ -32,21 +25,27 @@ export default function ExploreScreen({ navigation }) {
           style={{
             backgroundColor: "#F2F3F2",
             borderRadius: 16,
-            paddingHorizontal: 16,
-            paddingVertical: 12,
             flexDirection: "row",
             alignItems: "center",
           }}
         >
-          <Image
-            source={storeAssets.searchIcon}
-            style={{ width: 18, height: 18, resizeMode: "contain", marginRight: 10 }}
-          />
-          <TextInput
-            placeholder="Search Store"
-            placeholderTextColor="#7C7C7C"
-            style={{ flex: 1 }}
-          />
+          <TouchableOpacity
+            activeOpacity={0.85}
+            onPress={() => navigation.navigate("Search")}
+            style={{
+              flex: 1,
+              flexDirection: "row",
+              alignItems: "center",
+              paddingHorizontal: 16,
+              paddingVertical: 12,
+            }}
+          >
+            <Image
+              source={storeAssets.searchIcon}
+              style={{ width: 18, height: 18, resizeMode: "contain", marginRight: 10 }}
+            />
+            <Text style={{ flex: 1, color: "#7C7C7C", fontSize: 16 }}>Search Store</Text>
+          </TouchableOpacity>
         </View>
       </View>
 
