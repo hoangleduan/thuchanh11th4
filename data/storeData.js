@@ -31,6 +31,19 @@ export const storeAssets = {
   tabCart: require("../assets/Vector.png"),
   tabFavourite: require("../assets/bookmark 1.png"),
   tabAccount: require("../assets/user 1.png"),
+  accountAvatar: require("../assets/avt.png"),
+  accountEdit: require("../assets/carot.png"),
+  accountChevron: require("../assets/Frame (3).png"),
+  accountLogout: require("../assets/Frame (3).png"),
+  accountOrders: require("../assets/Orders icon.png"),
+  accountDetails: require("../assets/my detail.png"),
+  accountAddress: require("../assets/Delicery address.png"),
+  accountPayment: require("../assets/payment.png"),
+  accountPromo: require("../assets/Promo Cord icon.png"),
+  accountNotifications: require("../assets/Bell icon.png"),
+  accountHelp: require("../assets/help icon.png"),
+  accountAbout: require("../assets/about icon.png"),
+  
 };
 
 export const homeSections = [

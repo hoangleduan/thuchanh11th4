@@ -76,6 +76,7 @@ export default function FavouritesScreen({ navigation }) {
         >
           <TouchableOpacity
             activeOpacity={0.85}
+            onPress={() => navigation.navigate("OrderFailed")}
             style={{
               backgroundColor: "#53B175",
               borderRadius: 19,

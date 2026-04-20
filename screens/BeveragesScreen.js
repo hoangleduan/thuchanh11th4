@@ -2,9 +2,10 @@ import React from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { useStorage } from "../hooks/useStorage";
 import { beverageProducts, storeAssets } from "../data/storeData";
 
-function BeverageCard({ item }) {
+function BeverageCard({ item, onAddToCart }) {
   return (
     <View
       style={{
@@ -38,6 +39,7 @@ function BeverageCard({ item }) {
           ${item.price.toFixed(2)}
         </Text>
         <TouchableOpacity
+          onPress={() => onAddToCart(item)}
           style={{
             width: 42,
             height: 42,
@@ -55,6 +57,8 @@ function BeverageCard({ item }) {
 }
 
 export default function BeveragesScreen({ navigation }) {
+  const { addToCart } = useStorage();
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
       <View
@@ -85,7 +89,7 @@ export default function BeveragesScreen({ navigation }) {
       >
         <View style={{ flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between" }}>
           {beverageProducts.map((item) => (
-            <BeverageCard key={item.id} item={item} />
+            <BeverageCard key={item.id} item={item} onAddToCart={addToCart} />
           ))}
         </View>
       </ScrollView>

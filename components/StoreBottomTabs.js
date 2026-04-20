@@ -22,7 +22,7 @@ const tabs = [
     key: "Account",
     label: "Account",
     asset: storeAssets.tabAccount,
-    route: null,
+    route: "Account",
   },
 ];
 
@@ -60,7 +60,12 @@ export default function StoreBottomTabs({ navigation, activeTab }) {
             {tab.asset ? (
               <Image
                 source={tab.asset}
-                style={{ width: 20, height: 20, resizeMode: "contain" }}
+                style={{
+                  width: 20,
+                  height: 20,
+                  resizeMode: "contain",
+                  tintColor: isActive ? "#53B175" : "#181725",
+                }}
               />
             ) : (
               <View

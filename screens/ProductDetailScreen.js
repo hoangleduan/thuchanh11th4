@@ -2,12 +2,28 @@ import React, { useState } from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { useStorage } from "../hooks/useStorage";
 import { productDetail, storeAssets } from "../data/storeData";
 
 export default function ProductDetailScreen({ navigation }) {
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useStorage();
 
   const totalPrice = (productDetail.price * quantity).toFixed(2);
+
+  const handleAddToBasket = async () => {
+    await addToCart(
+      {
+        id: "naturel-red-apple",
+        name: productDetail.name,
+        size: productDetail.subtitle,
+        price: productDetail.price,
+        image: productDetail.image,
+      },
+      quantity
+    );
+    navigation.navigate("MyCart");
+  };
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
@@ -191,6 +207,7 @@ export default function ProductDetailScreen({ navigation }) {
           </View>
 
           <TouchableOpacity
+            onPress={handleAddToBasket}
             style={{
               backgroundColor: "#53B175",
               borderRadius: 18,

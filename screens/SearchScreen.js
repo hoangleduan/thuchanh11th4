@@ -10,6 +10,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import StoreBottomTabs from "../components/StoreBottomTabs";
+import { useStorage } from "../hooks/useStorage";
 import {
   searchAssets,
   searchFilterBrands,
@@ -17,7 +18,7 @@ import {
   searchProducts,
 } from "../data/searchData";
 
-function SearchProductCard({ item }) {
+function SearchProductCard({ item, onAddToCart }) {
   return (
     <View
       style={{
@@ -60,6 +61,7 @@ function SearchProductCard({ item }) {
           ${item.price.toFixed(2)}
         </Text>
         <TouchableOpacity
+          onPress={() => onAddToCart(item)}
           style={{
             width: 44,
             height: 44,
@@ -78,6 +80,7 @@ function SearchProductCard({ item }) {
 
 export default function SearchScreen({ navigation, route }) {
   const [query, setQuery] = useState(route.params?.query ?? "Egg");
+  const { addToCart } = useStorage();
 
   const selectedCategories = route.params?.selectedCategories ?? searchFilterCategories;
   const selectedBrands = route.params?.selectedBrands ?? searchFilterBrands;
@@ -164,7 +167,7 @@ export default function SearchScreen({ navigation, route }) {
       >
         <View style={{ flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between" }}>
           {filteredProducts.map((item) => (
-            <SearchProductCard key={item.id} item={item} />
+            <SearchProductCard key={item.id} item={item} onAddToCart={addToCart} />
           ))}
         </View>
 

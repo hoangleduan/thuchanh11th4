@@ -10,9 +10,10 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import StoreBottomTabs from "../components/StoreBottomTabs";
+import { useStorage } from "../hooks/useStorage";
 import { homeSections, storeAssets } from "../data/storeData";
 
-function ProductCard({ item, navigation }) {
+function ProductCard({ item, navigation, onAddToCart }) {
   return (
     <TouchableOpacity
       activeOpacity={0.9}
@@ -60,6 +61,15 @@ function ProductCard({ item, navigation }) {
         </Text>
 
         <TouchableOpacity
+          onPress={() =>
+            onAddToCart({
+              id: item.id,
+              name: item.name,
+              size: item.subtitle,
+              price: item.price,
+              image: item.image,
+            })
+          }
           style={{
             width: 42,
             height: 42,
@@ -77,6 +87,8 @@ function ProductCard({ item, navigation }) {
 }
 
 export default function HomeScreen({ navigation }) {
+  const { addToCart } = useStorage();
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
       <ScrollView
@@ -190,11 +202,16 @@ export default function HomeScreen({ navigation }) {
               </ScrollView>
             ) : null}
 
-            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-              {section.items.map((item) => (
-                <ProductCard key={item.id} item={item} navigation={navigation} />
-              ))}
-            </ScrollView>
+              <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                {section.items.map((item) => (
+                <ProductCard
+                  key={item.id}
+                  item={item}
+                  navigation={navigation}
+                  onAddToCart={addToCart}
+                />
+                ))}
+              </ScrollView>
           </View>
         ))}
       </ScrollView>
