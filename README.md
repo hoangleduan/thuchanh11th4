@@ -4,6 +4,12 @@
 -Tất cả ảnh và vd đã ddc e update !
 -ĐÃ UPDATE 2 BUỔI
 -ĐÃ UPDATE 3 BUỔI
+-ĐÃ UPDATE BUỔI 4
+video demo: 
+
+https://github.com/user-attachments/assets/6aff1e71-3106-4cc5-907b-58831ea421c3
+
+
 -------------------------------------------------------
 <img width="944" height="2046" alt="image" src="https://github.com/user-attachments/assets/f684d2f0-acea-499b-9eb3-7b3acc876363" />
 <img width="944" height="2046" alt="image" src="https://github.com/user-attachments/assets/9dc5e76b-5c3b-441b-a372-08ce37ee1d68" />
@@ -25,4 +31,12 @@
 <img width="944" height="2046" alt="image" src="https://github.com/user-attachments/assets/b2efe52f-6a60-4815-8b6b-ba34e50d1156" />
 <img width="944" height="2046" alt="image" src="https://github.com/user-attachments/assets/f4894e24-4d19-4ef7-9b62-94c59fbdf83a" />
 <img width="944" height="2046" alt="image" src="https://github.com/user-attachments/assets/f65470e6-1d10-4a6e-a220-1365f511e24c" />
+--UPDATE BUỔI 4
+<img width="944" height="2046" alt="image" src="https://github.com/user-attachments/assets/0bad4a5a-44fe-4695-a826-de3d5fd8fc29" />
+<img width="944" height="2046" alt="image" src="https://github.com/user-attachments/assets/662f3c1b-183e-421c-88f5-0c6fc7cc889f" />
+<img width="944" height="2046" alt="image" src="https://github.com/user-attachments/assets/23c08dc3-0163-4bf8-aa4e-9e87125095ba" />
+<img width="944" height="2046" alt="image" src="https://github.com/user-attachments/assets/fbe019bf-1bdd-4afd-bce2-436b6b4fda31" />
+<img width="944" height="2046" alt="image" src="https://github.com/user-attachments/assets/7c8d4566-3973-4d19-9e67-c6b6092c7696" />
+<img width="944" height="2046" alt="image" src="https://github.com/user-attachments/assets/b61c001f-b5aa-40f0-9859-37f598d94728" />
+
 
